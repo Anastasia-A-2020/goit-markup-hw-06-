@@ -896,6 +896,9 @@ body {
 }
 
 .modal-policy{
+  display: inline-flex;
+  align-items: center;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -927,4 +930,36 @@ body {
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--title-secondary-color);
+}
+
+.modal-check{
+  margin-right: 7px;
+
+  border: 2px solid black;
+  width: 15px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.policy-check{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.policy-check:checked+.modal-check{
+  background-origin: border-box;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  
+  background-image: url(../images/icon-checkbox.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
